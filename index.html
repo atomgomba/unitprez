@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Unit testing on Android</title>
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/white.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="css/androidstudio.css">
+
+        <!-- Fira Code font -->
+        <link rel="stylesheet" href="https://github.com/unisonweb/unison/raw/master/editor/fonts/fira-code.webfont/webfont.css">
+        <style>
+            code {
+                font-family: "Fira Code" !important;
+                line-height: 1.5em !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown="slides/00-intro.md"
+                         data-transition="fade-in fade-out"
+                         data-separator="^\n\n\n"
+                         data-charset="utf-8"
+                         data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/01-about-unit-tests.md"
+                         data-transition="fade-in fade-out"
+                         data-separator="^\n\n\n"
+                         data-charset="utf-8"
+                         data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/02-the-problem-on-android.md"
+                         data-transition="fade-in fade-out"
+                         data-separator="^\n\n\n"
+                         data-charset="utf-8"
+                         data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/03-the-solution.md"
+                         data-transition="fade-in fade-out"
+                         data-separator="^\n\n\n"
+                         data-charset="utf-8"
+                         data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/04-takeways.md"
+                         data-transition="fade-in fade-out"
+                         data-separator="^\n\n\n"
+                         data-charset="utf-8"
+                         data-separator-notes="^Note:">
+                </section>
+            </div>
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'bower_components/reveal.js/plugin/markdown/marked.js' },
+                    { src: 'bower_components/reveal.js/plugin/markdown/markdown.js' },
+                    { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+                    { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
