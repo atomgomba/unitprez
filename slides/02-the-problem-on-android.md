@@ -75,7 +75,7 @@ The android.jar stub methods throw a RuntimeException when called and it can als
 ```java
 class TestContext extends MockContext {
     @Override public MockResources getResources() {
-        return new MyMockedResources();
+        return new TestResources();
     }
 }
 ```

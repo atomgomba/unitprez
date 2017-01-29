@@ -12,7 +12,7 @@ POJO stands for Plain Old Java Object and it basically means an instance of a cl
 In our current context it means a class without any Android-related dependencies. Of course in practice it's not always
 possible to avoid Android completely, but in case of soft dependencies you can use the mock android.jar.
 So if you put your business logic (or in fact any non-UI logic you would like to test) into a POJO,
-instead of an Activity for example, you will gain complete control over the lifetime of your object and thus make unit testing possibble.
+instead of an Activity for example, you will gain complete control over the lifetime of your object and thus make unit testing possible.
 So the whole point of making your code unit testable is to refactor logic into POJO classes and make those classes assertable in ways I have shown previously.
 Of course you still can't get away from the platform completely because you have a launcher Activity for example, you need to rely on user interactions,
 presentation, navigation and so on, but you can still use those Android classes as mere execution entry points for your own code.
@@ -36,3 +36,22 @@ you don't have to go dogmatic about that.
 Feel free to experiment and mix and match concepts and try to find the best architecture that suits you and your use-case,
 fits your maintenance needs, size of your project and so on.
 The whole point is still to make your code unit testable by making it independent of Android.
+
+
+
+## Q&D MVP example
+
+```java
+class ArticleActivity extends Activity implements ArticleView {
+    @Inject ArticlePresenter mPresenter;
+    @Override void showArticle(ArticleModel model) {
+        // show article data on UI
+    }
+}
+
+class ArticlePresenter {
+    public ArticlePresenter(ArticleView view) {
+        mView = view;
+    }
+}
+```

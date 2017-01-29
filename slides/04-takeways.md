@@ -6,4 +6,4 @@
     * Well-established architectural patterns you can use  
 * Use Dependency Injection
 * Make your code assertable
-* Write unit tests
+* Write unit tests!

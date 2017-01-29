@@ -72,7 +72,7 @@ class MockBottle extends Bottle {
     @Override void consume() {
         mConsumeCalled = true;
     }
-    @Override isConsumeCalled() {
+    boolean isConsumeCalled() {
         return mConsumeCalled;
     }
 }
@@ -94,11 +94,11 @@ One of the most popular among these is mockito.
 
 ```java
 // injection via constructor
-Baby baby = new Baby(new Bottle());
+Baby baby = new Baby(new MockBottle());
 
 // injection via setter
 Baby baby = new Baby();
-baby.giveBottle(new Bottle());
+baby.giveBottle(new MockBottle());
 ```
 
 dependencies provided externally
