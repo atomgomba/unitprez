@@ -55,3 +55,8 @@ class ArticlePresenter {
     }
 }
 ```
+
+Note: In this MVP example the presenter governs the view through an interface. By doing so it does not matter whether the view
+is an Activity or other Android class, it remains isolated. The interface method signature contains a Model argument which is just
+a POJO class. The other thing to note here is that using constructor injection was not possible, since the Activity is a
+system-managed object. So our only option is to use a framework to inject the presenter in a field.

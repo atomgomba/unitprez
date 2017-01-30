@@ -36,8 +36,6 @@ In the arrange step you sort of create the situation which you want to test, the
 Baby baby = new Baby();
 baby.removeToy();
 assertTrue(baby.isCrying());
-baby.giveToy(new MockToy());
-assertFalse(baby.isCrying());
 ```
 
 Note: Here we're simply asserting an expected change in an accessible property.
@@ -50,8 +48,6 @@ Note: Here we're simply asserting an expected change in an accessible property.
 Baby baby = new Baby();
 boolean toyGiven = baby.giveToy(null);
 assertFalse(toyGiven);
-toyGiven = baby.giveToy(new MockToy());
-assertTrue(toyGiven);
 ```
 
 Note: It's simple. When asserting return value we verify the value returned by the method we've called in the action step.
@@ -79,11 +75,11 @@ class MockBottle extends Bottle {
 ```
 
 Note: Here we're verifying the state of an object which is passed in as a dependency to the method in the action step.
-In case our Baby class behaves well, we expect it to consume from the bottle.
+In case our Baby class behaves well, we expect it to consume from the bottle, so to call the bottle's consume method.
 This is also simple, but interesting as well, because here we see something called Dependency Injection, which is
 very useful when it comes to code extensibility, maintenance and testing.
 As you can see we're testing the Baby, so we have to remove the external complexity imposed by the Bottle.
-All we want to do is to verify whether the Baby has called a method on the Bottle or not. For this purpose we are
+All we want to do is to verify whether the Baby has used the Bottle or not. For this purpose we are
 mocking the Bottle which does nothing else than setting the correct flag which we can later inspect.
 Creating these mock classes can be tedious work, but fortunately there are tools that can help you with this.
 One of the most popular among these is mockito.

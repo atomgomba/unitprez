@@ -1,6 +1,7 @@
 ## Definition
 
 * method or class in Java
+  * or default interface method since Java 8
 * isolation: reduce code to minimum
 * no external code
 * cause of failure immediately obvious
@@ -72,8 +73,8 @@
 
 ## Q&D MVP example
 
-* what the presenter does
-* view interface
+* presenter governs view
+* Activity isolated via interface
 * DI framework required
 * constructor injection not available
 * just to give an idea how separation works
