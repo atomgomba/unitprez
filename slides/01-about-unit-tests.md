@@ -60,16 +60,13 @@ In this case we expect the Baby to not to receive the toy if the toy was empty.
 ```java
 Baby baby = new Baby();
 Bottle bottle = new MockBottle();
+// baby uses bottle to eat
 baby.feed(bottle);
-assertFalse(bottle.isConsumeCalled());
+assertTrue(bottle.isConsumeCalled());
 
 class MockBottle extends Bottle {
-    boolean mConsumeCalled;
     @Override void consume() {
         mConsumeCalled = true;
-    }
-    boolean isConsumeCalled() {
-        return mConsumeCalled;
     }
 }
 ```
