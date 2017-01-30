@@ -13,7 +13,7 @@ as a method argument. And this won't allow you to complete the steps of a unit t
 ```java
 ArticleViewActivity a = new ArticleViewActivity();
 Bundle b = new Bundle();
-b.putBoolean("articleId", "bab13");
+b.putString("articleId", "bab13");
 a.onCreate(b);
 assertTrue(a.hasArticle());
 ```
