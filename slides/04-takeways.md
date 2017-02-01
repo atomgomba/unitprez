@@ -12,3 +12,16 @@ Note: Every new component to a system introduces extra problems and this is the 
 Once you have tests you always need to keep them up-to-date with your current code.
 Although this can be a hassle, failing tests actually reflect the changes in your code, so you can
 double-check the changes you have made.
+
+
+
+## Resources
+
+This presentation  
+[github.com/atomgomba/unitprez](https://github.com/atomgomba/unitprez)
+
+Android Testing Codelab  
+[codelabs.developers.google.com/codelabs/android-testing](https://codelabs.developers.google.com/codelabs/android-testing)
+
+Mobil appok automata disztribúciója  
+[medium.com/mito/mobil-appok-automata-disztribúciója-6f795321a74](https://medium.com/mito/mobil-appok-automata-disztrib%C3%BAci%C3%B3ja-6f795321a74)
