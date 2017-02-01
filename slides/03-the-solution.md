@@ -17,7 +17,7 @@ So the whole point of making your code unit testable is to refactor logic into P
 Of course you still can't get away from the platform completely because you have a launcher Activity for example, you need to rely on user interactions,
 presentation, navigation and so on, but you can still use those Android classes as mere execution entry points for your own code.
 
-
+---
 
 ## Ready-made solutions
 
@@ -37,7 +37,7 @@ Feel free to experiment and mix and match concepts and try to find the best arch
 fits your maintenance needs, size of your project and so on.
 The whole point is still to make your code unit testable by making it independent of Android.
 
-
+---
 
 ## Q&D MVP example
 

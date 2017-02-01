@@ -8,7 +8,7 @@ It is desired to reduce the amount of executed code to the necessary minimum to 
 So for eg. your test should not rely on external code, because you don't want to test someone else's code, but your own code.
 And the point is that when a test fails it must be immediately obvious where the root of the problem is.
 
-
+---
 
 ## Common Structure
 
@@ -24,11 +24,11 @@ assertTrue(baby.isCrying());
 Note: This is the most common structure of unit tests, but having a verification step is inevitable.
 In the arrange step you sort of create the situation which you want to test, then take action and finally inspect the result.
 
-
+---
 
 ## 3 + 1 Ways to Assert
 
-
+---
 
 ## 1. Property Change
 
@@ -40,7 +40,7 @@ assertTrue(baby.isCrying());
 
 Note: Here we're simply asserting an expected change in an accessible property.
 
-
+---
 
 ## 2. Return Value
 
@@ -53,7 +53,7 @@ assertFalse(toyGiven);
 Note: It's simple. When asserting return value we verify the value returned by the method we've called in the action step.
 In this case we expect the Baby to not to receive the toy if the toy was empty.
 
-
+---
 
 ## 3. Change in Dependency
 
@@ -81,7 +81,7 @@ mocking the Bottle which does nothing else than setting the correct flag which w
 Creating these mock classes can be tedious work, but fortunately there are tools that can help you with this.
 One of the most popular among these is mockito.
 
-
+---
 
 ### By-pass: Dependency Injection
 
@@ -106,7 +106,7 @@ Constructor injection is preferred over setter injection every time it is feasib
 then you can make those fields final and all of them will be already available at construction time.
 This helps readability and reliability.
 
-
+---
 
 ### Don't do this!
 
@@ -122,7 +122,7 @@ class Baby {
 
 Note: This is considered bad practice, since here you cannot replace the dependency for the purpose of testing without modifying the original class.
 
-
+---
 
 ## +1 Exceptions
 

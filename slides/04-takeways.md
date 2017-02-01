@@ -13,7 +13,7 @@ Once you have tests you always need to keep them up-to-date with your current co
 Although this can be a hassle, failing tests actually reflect the changes in your code, so you can
 double-check the changes you have made.
 
-
+---
 
 ## Resources
 

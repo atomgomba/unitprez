@@ -3,7 +3,7 @@
 ## Károly Kiripolszky
 Android Developer @ <span style="color: #C21F4B">Mito</span>
 
-
+---
 
 ## Structure
 

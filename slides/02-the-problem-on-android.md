@@ -8,7 +8,7 @@ an Activity, a Service and similar kind of classes whose instances are created a
 Sometimes they're declared in the manifest, sometimes they're handed to you by a God object's (eg. Context) factory method or
 as a method argument. And this won't allow you to complete the steps of a unit test.
 
-
+---
 
 ```java
 ArticleViewActivity a = new ArticleViewActivity();
@@ -23,7 +23,7 @@ Moreover, to gain access to these objects you would have to run the test in an e
 And that is called an instrumented test. When it comes to Fragments, sure you can instantiate a Fragment yourself,
 but if you would like to do yourself a favor you won't be using Fragments anyway.
 
-
+---
 
 
 ## What about instrumented tests?
@@ -36,7 +36,7 @@ Note: An instrumented test will show you how your code behaves in the context of
 Besides a bug in your own code, the test could fail because of problems with the emulator/device, or potential bugs in Android itself, and so on.
 And it is focused on asserting user interactions, so instrumented tests and unit tests are not to be confused with each other.
 
-
+---
 
 ## Unit tests are:
 
@@ -53,7 +53,7 @@ Furthermore, running tests in the JVM also makes it a lot easier to incorporate 
 By including a unit testing step in your CI process, you can let your tests run and report automatically.
 Unit tests are also reliable because their success or failure do not depend on behavior of any external systems.
 
-
+---
 
 ## Mock android.jar
 
@@ -67,7 +67,7 @@ Mock Android objects come in handy when having soft dependencies. A soft depende
 but it will be never called. Sometimes you need a soft dependency in order to create an object, but not to test some of its methods.
 The android.jar stub methods throw a RuntimeException when called and it can also be useful to check how much your code depends on Android.
 
-
+---
 
 **dev.android.com:**  
 "This is to make sure you test only your code and do not depend on any particular behavior of the Android platform (that you have not explicitly mocked)."
